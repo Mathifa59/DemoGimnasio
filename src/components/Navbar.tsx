@@ -1,8 +1,8 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import { Menu, X } from "lucide-react";
-import { NAV_LINKS } from "@/lib/data";
+import { Menu, X, MessageCircle } from "lucide-react";
+import { NAV_LINKS, WHATSAPP_URL } from "@/lib/data";
 import Button from "@/components/ui/Button";
 
 export default function Navbar() {
@@ -10,10 +10,7 @@ export default function Navbar() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   useEffect(() => {
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > 50);
-    };
-
+    const handleScroll = () => setIsScrolled(window.scrollY > 50);
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
@@ -25,42 +22,45 @@ export default function Navbar() {
 
   return (
     <nav
-      className={`fixed top-0 left-0 right-0 z-50 transition-all ${
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         isScrolled
-          ? "bg-gym-dark/80 backdrop-blur-md border-b border-white/10"
+          ? "bg-gym-dark/90 backdrop-blur-xl border-b border-white/5 shadow-lg shadow-black/20"
           : "bg-transparent"
       }`}
     >
       <div className="max-w-7xl mx-auto px-4 md:px-8 py-4 flex items-center justify-between">
         {/* Logo */}
-        <a
-          href="#"
-          className="font-oswald font-bold text-xl uppercase text-gym-text tracking-wider"
-        >
-          PREMIUM GYM
+        <a href="#" className="font-oswald font-bold text-xl uppercase text-gym-text tracking-wider">
+          <span className="text-gym-red">PREMIUM</span> GYM
         </a>
 
         {/* Desktop Navigation */}
-        <div className="hidden md:flex items-center gap-8">
+        <div className="hidden lg:flex items-center gap-8">
           {NAV_LINKS.map((link) => (
             <button
               key={link.href}
               onClick={() => handleNavClick(link.href)}
-              className="text-sm uppercase tracking-wider text-gym-text-secondary hover:text-gym-text transition cursor-pointer"
+              className="text-xs uppercase tracking-widest text-gym-text-secondary hover:text-gym-text transition-colors cursor-pointer relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-px after:bg-gym-red hover:after:w-full after:transition-all"
             >
               {link.label}
             </button>
           ))}
         </div>
 
-        {/* Desktop CTA */}
-        <div className="hidden md:block">
-          <Button variant="primary">Únete ahora</Button>
+        {/* Desktop CTAs */}
+        <div className="hidden lg:flex items-center gap-3">
+          <Button variant="ghost" href={WHATSAPP_URL} size="sm">
+            <MessageCircle size={16} />
+            WhatsApp
+          </Button>
+          <Button variant="primary" href="#pricing" size="sm">
+            Empieza hoy
+          </Button>
         </div>
 
         {/* Mobile Hamburger */}
         <button
-          className="md:hidden min-h-[44px] min-w-[44px] flex items-center justify-center text-gym-text cursor-pointer"
+          className="lg:hidden min-h-[44px] min-w-[44px] flex items-center justify-center text-gym-text cursor-pointer"
           onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
           aria-label={isMobileMenuOpen ? "Cerrar menú" : "Abrir menú"}
         >
@@ -70,8 +70,8 @@ export default function Navbar() {
 
       {/* Mobile Menu */}
       {isMobileMenuOpen && (
-        <div className="md:hidden bg-gym-dark/95 backdrop-blur-md border-t border-white/10">
-          <div className="max-w-7xl mx-auto px-4 py-4 flex flex-col gap-4">
+        <div className="lg:hidden bg-gym-dark/98 backdrop-blur-xl border-t border-white/5">
+          <div className="max-w-7xl mx-auto px-4 py-6 flex flex-col gap-3">
             {NAV_LINKS.map((link) => (
               <button
                 key={link.href}
@@ -81,9 +81,15 @@ export default function Navbar() {
                 {link.label}
               </button>
             ))}
-            <Button variant="primary" fullWidth>
-              Únete ahora
-            </Button>
+            <div className="flex flex-col gap-3 mt-4 pt-4 border-t border-white/5">
+              <Button variant="primary" fullWidth href="#pricing">
+                Empieza hoy
+              </Button>
+              <Button variant="whatsapp" fullWidth href={WHATSAPP_URL}>
+                <MessageCircle size={16} />
+                Hablar por WhatsApp
+              </Button>
+            </div>
           </div>
         </div>
       )}
