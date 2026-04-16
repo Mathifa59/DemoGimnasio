@@ -1,0 +1,106 @@
+@import "tailwindcss";
+
+@theme {
+  --color-gym-dark: #0F0F10;
+  --color-gym-card: #1C1C1F;
+  --color-gym-red: #D62828;
+  --color-gym-red-hover: #9E1B1B;
+  --color-gym-text: #F5F5F5;
+  --color-gym-text-secondary: #8A8F98;
+  --color-gym-detail: #C7CCD1;
+  --color-gym-accent: #FF6B00;
+
+  --font-oswald: var(--font-oswald);
+  --font-inter: var(--font-inter);
+}
+
+body {
+  background-color: #0F0F10;
+  color: #F5F5F5;
+  font-family: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+  scroll-behavior: smooth;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-oswald), ui-sans-serif, system-ui, sans-serif;
+  text-transform: uppercase;
+}
+
+/* Glow effects */
+.glow-red {
+  box-shadow: 0 0 20px rgba(214, 40, 40, 0.3), 0 0 60px rgba(214, 40, 40, 0.1);
+}
+
+.glow-accent {
+  box-shadow: 0 0 20px rgba(255, 107, 0, 0.3), 0 0 60px rgba(255, 107, 0, 0.1);
+}
+
+/* Gradient text */
+.text-gradient-red {
+  background: linear-gradient(135deg, #D62828, #FF6B00);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Animated gradient border */
+.border-gradient {
+  position: relative;
+  border: 1px solid transparent;
+  background-clip: padding-box;
+}
+
+.border-gradient::before {
+  content: '';
+  position: absolute;
+  inset: -1px;
+  border-radius: inherit;
+  background: linear-gradient(135deg, #D62828, #FF6B00, #D62828);
+  z-index: -1;
+  background-size: 200% 200%;
+  animation: gradientShift 3s ease infinite;
+}
+
+@keyframes gradientShift {
+  0%, 100% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+}
+
+/* Pulse animation for CTA */
+@keyframes pulse-glow {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(214, 40, 40, 0.4); }
+  50% { box-shadow: 0 0 20px 10px rgba(214, 40, 40, 0); }
+}
+
+.animate-pulse-glow {
+  animation: pulse-glow 2s ease-in-out infinite;
+}
+
+/* Noise texture overlay */
+.noise-overlay::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  opacity: 0.03;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0F0F10;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #1C1C1F;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #D62828;
+}
