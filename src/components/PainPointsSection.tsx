@@ -13,14 +13,14 @@ export default function PainPointsSection() {
   return (
     <SectionWrapper id="pain-points">
       <AnimatedSection animation="fadeUp">
-        <div className="text-center mb-16">
+        <div className="text-center mb-10 sm:mb-16">
           <span className="text-gym-red text-sm font-bold uppercase tracking-widest">
             Te entendemos
           </span>
-          <h2 className="font-oswald uppercase text-3xl md:text-5xl font-bold text-gym-text mt-3">
+          <h2 className="font-oswald uppercase text-2xl sm:text-3xl md:text-5xl font-bold text-gym-text mt-3">
             ¿Te suena esto?
           </h2>
-          <p className="text-gym-text-secondary mt-4 max-w-2xl mx-auto">
+          <p className="text-gym-text-secondary mt-3 sm:mt-4 max-w-2xl mx-auto text-sm sm:text-base">
             Sabemos lo frustrante que es no ver resultados. Por eso diseñamos cada programa para resolver exactamente eso.
           </p>
         </div>
@@ -29,7 +29,7 @@ export default function PainPointsSection() {
       <AnimatedSection
         stagger
         staggerDelay={0.1}
-        className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-5xl mx-auto"
+        className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6 max-w-5xl mx-auto"
       >
         {PAIN_POINTS.map((point) => {
           const Icon = iconMap[point.icon];

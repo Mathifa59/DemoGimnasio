@@ -43,7 +43,7 @@ export default function HeroSection() {
       <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-[#0F0F10] to-transparent" />
 
       {/* Content */}
-      <div className="relative z-10 w-full max-w-7xl mx-auto px-4 md:px-8 pt-24 pb-12">
+      <div className="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-6 md:px-8 pt-24 pb-12">
         <div className="max-w-3xl">
           {/* Promo Badge */}
           <motion.div
@@ -52,7 +52,7 @@ export default function HeroSection() {
             animate="visible"
             custom={0}
           >
-            <span className="inline-flex items-center gap-2 bg-gym-accent/15 border border-gym-accent/30 text-gym-accent text-xs font-bold uppercase tracking-wider px-4 py-2 rounded-full mb-6 backdrop-blur-sm">
+            <span className="inline-flex items-center gap-2 bg-gym-accent/15 border border-gym-accent/30 text-gym-accent text-[10px] sm:text-xs font-bold uppercase tracking-wider px-3 sm:px-4 py-2 rounded-full mb-4 sm:mb-6 backdrop-blur-sm">
               <Flame size={14} className="animate-pulse" />
               Primera clase gratis — Matrícula 0€ este mes
             </span>
@@ -60,7 +60,7 @@ export default function HeroSection() {
 
           {/* Headline */}
           <motion.h1
-            className="font-oswald uppercase font-bold text-gym-text text-5xl md:text-7xl lg:text-8xl leading-[0.9] tracking-tight"
+            className="font-oswald uppercase font-bold text-gym-text text-3xl xs:text-4xl sm:text-5xl md:text-7xl lg:text-8xl leading-[0.9] tracking-tight"
             variants={fadeInUp}
             initial="hidden"
             animate="visible"
@@ -73,7 +73,7 @@ export default function HeroSection() {
 
           {/* Subheadline */}
           <motion.p
-            className="mt-6 text-lg md:text-xl text-gym-detail max-w-xl leading-relaxed"
+            className="mt-4 sm:mt-6 text-base sm:text-lg md:text-xl text-gym-detail max-w-xl leading-relaxed"
             variants={fadeInUp}
             initial="hidden"
             animate="visible"
@@ -84,7 +84,7 @@ export default function HeroSection() {
 
           {/* CTA Buttons */}
           <motion.div
-            className="mt-8 flex flex-col sm:flex-row gap-4"
+            className="mt-6 sm:mt-8 flex flex-col sm:flex-row gap-3 sm:gap-4"
             variants={fadeInUp}
             initial="hidden"
             animate="visible"
@@ -102,7 +102,7 @@ export default function HeroSection() {
 
           {/* Social proof micro-stats */}
           <motion.div
-            className="mt-10 flex flex-wrap gap-6 md:gap-10"
+            className="mt-8 sm:mt-10 grid grid-cols-2 sm:flex sm:flex-wrap gap-4 sm:gap-6 md:gap-10"
             variants={fadeInUp}
             initial="hidden"
             animate="visible"

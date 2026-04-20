@@ -42,9 +42,9 @@ const socialLinks = [
 
 export default function Footer() {
   return (
-    <footer className="bg-gym-dark border-t border-white/5 py-12 md:py-16 px-4 md:px-8">
+    <footer className="bg-gym-dark border-t border-white/5 py-10 sm:py-12 md:py-16 px-4 sm:px-6 md:px-8">
       <div className="max-w-7xl mx-auto">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 text-center md:text-left">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 text-center sm:text-left">
           <div>
             <span className="font-oswald uppercase font-bold text-xl text-gym-text">
               <span className="text-gym-red">PREMIUM</span> GYM
@@ -68,13 +68,13 @@ export default function Footer() {
           <div>
             <h3 className="font-oswald uppercase text-sm font-bold text-gym-text mb-4">Contacto</h3>
             <ul className="space-y-3">
-              <li className="flex items-center gap-2 justify-center md:justify-start text-sm text-gym-text-secondary">
+              <li className="flex items-center gap-2 justify-center sm:justify-start text-sm text-gym-text-secondary">
                 <MapPin size={16} className="shrink-0 text-gym-red" /><span>Calle Fitness 123, Madrid</span>
               </li>
-              <li className="flex items-center gap-2 justify-center md:justify-start text-sm text-gym-text-secondary">
+              <li className="flex items-center gap-2 justify-center sm:justify-start text-sm text-gym-text-secondary">
                 <Phone size={16} className="shrink-0 text-gym-red" /><span>+34 912 345 678</span>
               </li>
-              <li className="flex items-center gap-2 justify-center md:justify-start text-sm text-gym-text-secondary">
+              <li className="flex items-center gap-2 justify-center sm:justify-start text-sm text-gym-text-secondary">
                 <Mail size={16} className="shrink-0 text-gym-red" /><span>info@premiumgym.es</span>
               </li>
             </ul>
@@ -82,7 +82,7 @@ export default function Footer() {
 
           <div>
             <h3 className="font-oswald uppercase text-sm font-bold text-gym-text mb-4">Síguenos</h3>
-            <div className="flex gap-3 justify-center md:justify-start">
+            <div className="flex gap-3 justify-center sm:justify-start">
               {socialLinks.map((social) => (
                 <a
                   key={social.label}

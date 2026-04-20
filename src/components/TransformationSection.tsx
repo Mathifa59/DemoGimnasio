@@ -9,11 +9,11 @@ export default function TransformationSection() {
   return (
     <SectionWrapper id="transformation" background="card">
       <AnimatedSection animation="fadeUp">
-        <div className="text-center mb-16">
+        <div className="text-center mb-10 sm:mb-16">
           <span className="text-gym-accent text-sm font-bold uppercase tracking-widest">
             Resultados que hablan
           </span>
-          <h2 className="font-oswald uppercase text-3xl md:text-5xl font-bold text-gym-text mt-3">
+          <h2 className="font-oswald uppercase text-2xl sm:text-3xl md:text-5xl font-bold text-gym-text mt-3">
             Ellos ya lo lograron
           </h2>
         </div>
@@ -21,10 +21,10 @@ export default function TransformationSection() {
 
       {/* Trust stats bar */}
       <AnimatedSection animation="fadeUp" delay={0.1}>
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-16">
+        <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 sm:gap-4 mb-12 sm:mb-16">
           {TRUST_STATS.map((stat) => (
-            <div key={stat.label} className="text-center p-4 rounded-xl bg-gym-dark/50 border border-white/5">
-              <span className="font-oswald text-3xl md:text-4xl font-bold text-gradient-red">
+            <div key={stat.label} className="text-center p-3 sm:p-4 rounded-xl bg-gym-dark/50 border border-white/5">
+              <span className="font-oswald text-2xl sm:text-3xl md:text-4xl font-bold text-gradient-red">
                 {stat.value}
               </span>
               <p className="text-xs text-gym-text-secondary uppercase tracking-wider mt-1">
@@ -39,7 +39,7 @@ export default function TransformationSection() {
       <AnimatedSection
         stagger
         staggerDelay={0.1}
-        className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-5xl mx-auto"
+        className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6 max-w-5xl mx-auto"
       >
         {TESTIMONIALS.map((testimonial) => (
           <div

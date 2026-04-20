@@ -10,11 +10,11 @@ export default function PricingSection() {
   return (
     <SectionWrapper id="pricing">
       <AnimatedSection animation="fadeUp">
-        <div className="text-center mb-16">
+        <div className="text-center mb-10 sm:mb-16">
           <span className="text-gym-accent text-sm font-bold uppercase tracking-widest">
             Sin permanencia · Cancela cuando quieras
           </span>
-          <h2 className="font-oswald uppercase text-3xl md:text-5xl lg:text-6xl font-bold text-gym-text mt-3">
+          <h2 className="font-oswald uppercase text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-gym-text mt-3">
             Elige tu plan
           </h2>
           <p className="text-gym-text-secondary mt-4 max-w-xl mx-auto">
@@ -26,14 +26,14 @@ export default function PricingSection() {
       <AnimatedSection
         stagger
         staggerDelay={0.12}
-        className="grid grid-cols-1 lg:grid-cols-3 gap-6 lg:gap-8 items-stretch max-w-5xl mx-auto"
+        className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8 items-stretch max-w-5xl mx-auto"
       >
         {PRICING_PLANS.map((plan) => (
           <div
             key={plan.name}
             className={`relative rounded-2xl p-6 md:p-8 transition-all duration-500 hover:-translate-y-2 flex flex-col ${
               plan.isPopular
-                ? "bg-gym-card border-2 border-gym-accent glow-accent order-first lg:order-none lg:scale-105 z-10"
+                ? "bg-gym-card border-2 border-gym-accent glow-accent order-first md:col-span-2 lg:col-span-1 lg:order-none lg:scale-105 z-10"
                 : "bg-gym-card border border-white/5 hover:border-white/15"
             }`}
           >
@@ -53,7 +53,7 @@ export default function PricingSection() {
               </h3>
               <div className="mt-4 flex items-baseline gap-1">
                 <span className="text-gym-text-secondary text-lg">{plan.currency}</span>
-                <span className={`font-oswald text-5xl md:text-6xl font-bold ${plan.isPopular ? "text-gradient-red" : "text-gym-text"}`}>
+                <span className={`font-oswald text-4xl sm:text-5xl md:text-6xl font-bold ${plan.isPopular ? "text-gradient-red" : "text-gym-text"}`}>
                   {plan.price}
                 </span>
                 <span className="text-gym-text-secondary text-sm">/mes</span>

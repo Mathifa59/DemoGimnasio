@@ -28,7 +28,7 @@ export default function Navbar() {
           : "bg-transparent"
       }`}
     >
-      <div className="max-w-7xl mx-auto px-4 md:px-8 py-4 flex items-center justify-between">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-8 py-3 sm:py-4 flex items-center justify-between">
         {/* Logo */}
         <a href="#" className="font-oswald font-bold text-xl uppercase text-gym-text tracking-wider">
           <span className="text-gym-red">PREMIUM</span> GYM

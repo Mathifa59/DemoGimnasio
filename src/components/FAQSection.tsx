@@ -12,11 +12,11 @@ export default function FAQSection() {
   return (
     <SectionWrapper id="faq">
       <AnimatedSection animation="fadeUp">
-        <div className="text-center mb-16">
+        <div className="text-center mb-10 sm:mb-16">
           <span className="text-gym-accent text-sm font-bold uppercase tracking-widest">
             Resolvemos tus dudas
           </span>
-          <h2 className="font-oswald uppercase text-3xl md:text-5xl font-bold text-gym-text mt-3">
+          <h2 className="font-oswald uppercase text-2xl sm:text-3xl md:text-5xl font-bold text-gym-text mt-3">
             Preguntas frecuentes
           </h2>
         </div>

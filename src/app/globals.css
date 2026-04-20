@@ -19,6 +19,7 @@ body {
   color: #F5F5F5;
   font-family: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
 h1, h2, h3, h4, h5, h6 {

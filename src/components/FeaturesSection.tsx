@@ -13,11 +13,11 @@ export default function FeaturesSection() {
   return (
     <SectionWrapper id="features" background="card">
       <AnimatedSection animation="fadeUp">
-        <div className="text-center mb-16">
+        <div className="text-center mb-10 sm:mb-16">
           <span className="text-gym-accent text-sm font-bold uppercase tracking-widest">
             ¿Por qué Premium Gym?
           </span>
-          <h2 className="font-oswald uppercase text-3xl md:text-5xl font-bold text-gym-text mt-3">
+          <h2 className="font-oswald uppercase text-2xl sm:text-3xl md:text-5xl font-bold text-gym-text mt-3">
             Todo lo que necesitas.
             <br />
             <span className="text-gradient-red">Nada que te sobre.</span>
@@ -28,7 +28,7 @@ export default function FeaturesSection() {
       <AnimatedSection
         stagger
         staggerDelay={0.12}
-        className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6"
+        className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6"
       >
         {FEATURES.map((feature) => {
           const Icon = iconMap[feature.icon];

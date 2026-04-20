@@ -10,14 +10,14 @@ export default function ProgramsSection() {
   return (
     <SectionWrapper id="programs" background="card">
       <AnimatedSection animation="fadeUp">
-        <div className="text-center mb-16">
+        <div className="text-center mb-10 sm:mb-16">
           <span className="text-gym-accent text-sm font-bold uppercase tracking-widest">
             Programas de entrenamiento
           </span>
-          <h2 className="font-oswald uppercase text-3xl md:text-5xl font-bold text-gym-text mt-3">
+          <h2 className="font-oswald uppercase text-2xl sm:text-3xl md:text-5xl font-bold text-gym-text mt-3">
             Encuentra tu programa
           </h2>
-          <p className="text-gym-text-secondary mt-4 max-w-xl mx-auto">
+          <p className="text-gym-text-secondary mt-3 sm:mt-4 max-w-xl mx-auto text-sm sm:text-base">
             4 programas diseñados por expertos. Elige el tuyo y empieza con una clase gratis.
           </p>
         </div>
@@ -31,7 +31,7 @@ export default function ProgramsSection() {
         {PROGRAMS.map((program) => (
           <div
             key={program.name}
-            className="group relative overflow-hidden rounded-xl h-72 md:h-96 cursor-pointer"
+            className="group relative overflow-hidden rounded-xl h-60 sm:h-72 md:h-96 cursor-pointer"
           >
             {/* Image with zoom on hover */}
             <Image
@@ -51,14 +51,14 @@ export default function ProgramsSection() {
               <h3 className="font-oswald uppercase text-2xl md:text-3xl font-bold text-gym-text">
                 {program.name}
               </h3>
-              <p className="text-sm text-gym-detail mt-2 max-w-sm opacity-0 group-hover:opacity-100 transition-all duration-500 translate-y-2 group-hover:translate-y-0">
+              <p className="text-sm text-gym-detail mt-2 max-w-sm sm:opacity-0 sm:group-hover:opacity-100 sm:translate-y-2 sm:group-hover:translate-y-0 transition-all duration-500">
                 {program.description}
               </p>
               <a
                 href={WHATSAPP_URL}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 mt-4 text-sm font-semibold text-gym-accent uppercase tracking-wider opacity-0 group-hover:opacity-100 transition-all duration-500 translate-y-2 group-hover:translate-y-0 hover:text-gym-red"
+                className="inline-flex items-center gap-2 mt-4 text-sm font-semibold text-gym-accent uppercase tracking-wider sm:opacity-0 sm:group-hover:opacity-100 sm:translate-y-2 sm:group-hover:translate-y-0 transition-all duration-500 hover:text-gym-red"
               >
                 {program.ctaText}
                 <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform" />

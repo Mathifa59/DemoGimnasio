@@ -7,12 +7,12 @@ import SectionWrapper from "@/components/ui/SectionWrapper";
 import AnimatedSection from "@/components/ui/AnimatedSection";
 
 const galleryImages = [
-  { src: "/images/pexels-amar-13965335.jpg", alt: "Zona de pesas", className: "col-span-1 row-span-2" },
-  { src: "/images/pexels-amar-13965336.jpg", alt: "Entrenamiento funcional", className: "col-span-1 row-span-1" },
-  { src: "/images/pexels-amar-13965337.jpg", alt: "Área de cardio", className: "col-span-1 row-span-1" },
-  { src: "/images/pexels-amar-13965338.jpg", alt: "Zona de cross training", className: "col-span-1 row-span-2" },
-  { src: "/images/pexels-amar-13965343.jpg", alt: "Equipamiento premium", className: "col-span-1 row-span-1" },
-  { src: "/images/pexels-amar-14673249.jpg", alt: "Ambiente del gimnasio", className: "col-span-1 row-span-1" },
+  { src: "/images/pexels-amar-13965335.jpg", alt: "Zona de pesas", className: "sm:col-span-1 sm:row-span-2" },
+  { src: "/images/pexels-amar-13965336.jpg", alt: "Entrenamiento funcional", className: "sm:col-span-1 sm:row-span-1" },
+  { src: "/images/pexels-amar-13965337.jpg", alt: "Área de cardio", className: "sm:col-span-1 sm:row-span-1" },
+  { src: "/images/pexels-amar-13965338.jpg", alt: "Zona de cross training", className: "sm:col-span-1 sm:row-span-2" },
+  { src: "/images/pexels-amar-13965343.jpg", alt: "Equipamiento premium", className: "sm:col-span-1 sm:row-span-1" },
+  { src: "/images/pexels-amar-14673249.jpg", alt: "Ambiente del gimnasio", className: "sm:col-span-1 sm:row-span-1" },
 ];
 
 function GalleryImage({ image, index }: { image: typeof galleryImages[0]; index: number }) {
@@ -57,17 +57,17 @@ export default function GallerySection() {
   return (
     <SectionWrapper id="gallery" background="card">
       <AnimatedSection animation="fadeUp">
-        <div className="text-center mb-16">
+        <div className="text-center mb-10 sm:mb-16">
           <span className="text-gym-accent text-sm font-bold uppercase tracking-widest">
             Conoce nuestro espacio
           </span>
-          <h2 className="font-oswald uppercase text-3xl md:text-5xl font-bold text-gym-text mt-3">
+          <h2 className="font-oswald uppercase text-2xl sm:text-3xl md:text-5xl font-bold text-gym-text mt-3">
             Donde ocurre la magia
           </h2>
         </div>
       </AnimatedSection>
 
-      <div className="grid grid-cols-2 lg:grid-cols-3 auto-rows-[12rem] sm:auto-rows-[14rem] md:auto-rows-[16rem] gap-3 md:gap-4">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 auto-rows-[10rem] sm:auto-rows-[12rem] md:auto-rows-[14rem] lg:auto-rows-[16rem] gap-3 md:gap-4">
         {galleryImages.map((image, index) => (
           <GalleryImage key={image.src} image={image} index={index} />
         ))}

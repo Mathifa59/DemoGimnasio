@@ -8,7 +8,7 @@ import { WHATSAPP_URL } from "@/lib/data";
 
 export default function CTAFinalSection() {
   return (
-    <section className="relative w-full py-24 md:py-32 overflow-hidden">
+    <section className="relative w-full py-16 sm:py-24 md:py-32 overflow-hidden">
       {/* Background image */}
       <Image
         src="/images/pexels-amar-13965347.jpg"
@@ -27,24 +27,24 @@ export default function CTAFinalSection() {
       <div className="absolute bottom-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-gym-red/50 to-transparent" />
 
       {/* Content */}
-      <div className="relative z-10 flex flex-col items-center justify-center px-4 md:px-8 max-w-4xl mx-auto">
+      <div className="relative z-10 flex flex-col items-center justify-center px-4 sm:px-6 md:px-8 max-w-4xl mx-auto">
         <AnimatedSection animation="fadeUp">
           <div className="flex flex-col items-center text-center">
             <span className="text-gym-accent text-sm font-bold uppercase tracking-widest mb-4">
               ¿Listo para el cambio?
             </span>
 
-            <h2 className="font-oswald uppercase text-4xl md:text-6xl lg:text-7xl font-bold text-gym-text leading-[0.95]">
+            <h2 className="font-oswald uppercase text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-bold text-gym-text leading-[0.95]">
               Tu mejor versión
               <br />
               <span className="text-gradient-red">te está esperando</span>
             </h2>
 
-            <p className="text-lg md:text-xl text-gym-detail max-w-2xl mx-auto mt-6 leading-relaxed">
+            <p className="text-base sm:text-lg md:text-xl text-gym-detail max-w-2xl mx-auto mt-4 sm:mt-6 leading-relaxed">
               Primera clase gratis. Sin compromiso. Sin excusas.
             </p>
 
-            <div className="mt-8 flex flex-col sm:flex-row gap-4">
+            <div className="mt-6 sm:mt-8 flex flex-col sm:flex-row gap-3 sm:gap-4">
               <Button variant="primary" href="#pricing" size="lg" pulse>
                 Ver planes y precios
                 <ArrowRight size={18} />
